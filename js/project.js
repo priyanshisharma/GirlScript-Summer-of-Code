@@ -31,7 +31,8 @@ function displayModalData(ele) {
   modalOwnerLink.setAttribute('href', `https://github.com/${p_data.github_username}`);
   modalProject.innerText = `${p_data.project_video_link}`;
   modalProjectLink.setAttribute('href', `${p_data.project_video_link}`);
-  modalProject.innerHTML = `<iframe src="${p_data.project_video_link}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+  modalProject.innerHTML = `<iframe width="560" height="315"
+  src="${p_data.project_video_link}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
   modalMentorsTitle.innerText = `${p_data.mentors_id.length != 0? 'Mentors':''}`;
   modalMentors.innerHTML = p_data.mentors_id.map(ele => {
     return `
